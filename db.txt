@@ -31,3 +31,24 @@ FROM departments d
 8 SELECT count(id) 
 FROM teachers 
 where phone is null;
+
+parte 2 
+
+
+
+1 SELECT YEAR(enrolment_date) AS year, COUNT(*) AS num_inscriptions
+FROM students
+GROUP BY YEAR(enrolment_date)
+ORDER BY year;
+
+2 SELECT office_address, COUNT(*) AS num_teachers
+FROM teachers
+GROUP BY office_address
+
+3
+
+4 SELECT departments.name AS department_name, COUNT(degrees.id) AS num_degrees
+FROM degrees
+JOIN departments ON degrees.department_id = departments.id
+GROUP BY departments.name
+ORDER BY num_degrees DESC;
