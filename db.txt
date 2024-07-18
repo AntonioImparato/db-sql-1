@@ -1,0 +1,33 @@
+1 select count(id) 
+from students  where date_of_birth like "1990%"   
+
+1  select count(id) 
+from students  
+where date_of_birth between "1990/01/01" and "1990/12/31" 
+
+2 select *
+from courses 
+where cfu >= 10;
+
+3 select name , surname ,date_of_birth
+from students 
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) > 30;
+
+4  select *
+FROM courses
+WHERE year = 1 AND period like "I %";
+
+5 SELECT *
+FROM exams
+WHERE  hour > '14:00:00' AND date = '2020-06-20';
+
+6 SELECT *
+FROM degrees
+WHERE level = 'magistrale';
+
+7 SELECT count(id) 
+FROM departments d 
+
+8 SELECT count(id) 
+FROM teachers 
+where phone is null;
